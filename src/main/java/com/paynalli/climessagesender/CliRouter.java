@@ -11,5 +11,7 @@ public class CliRouter extends RouteBuilder {
     public void configure() throws Exception {
         from("timer:first-timer").transform().constant(LocalDateTime.now()).to("jms:first-timer");
 
+
+
     }
 }
