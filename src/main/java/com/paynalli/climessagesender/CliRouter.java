@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 public class CliRouter extends RouteBuilder {
     @Override
     public void configure() throws Exception {
-        from("timer:first-timer").transform().constant(LocalDateTime.now()).to("log:first-timer");
+        from("timer:first-timer").transform().constant(LocalDateTime.now()).to("jms:first-timer");
 
     }
 }
